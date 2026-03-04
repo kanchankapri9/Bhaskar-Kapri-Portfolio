@@ -1,0 +1,60 @@
+#project {
+    padding: 5rem;
+    background-color: Black;
+}
+
+.card {
+    width: 15rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid black;
+    border-radius: 1rem;
+    overflow: hidden; 
+    background-color: Black;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    flex: 0 0 auto; /* Prevent the card from shrinking and allow horizontal scrolling */
+}
+
+/*
+
+like if i remove the card width then it will take the width of the container and it will be very big so to prevent that we use flex: 0 0 auto; so it will not shrink and it will take the width of the content and allow horizontal scrolling 
+
+for the card consistency and to prevent the card from taking the full width of the container we set a fixed width for the card and we use flex: 0 0 auto; to prevent it from shrinking and allow horizontal scrolling when there are more cards than can fit in the container.
+
+
+*/
+#project {
+    padding: 5rem;
+    background-color: Black;
+
+
+}
+
+.card-img {
+    width: 15rem;
+    height: 10rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+.card-body {
+    padding: 2rem;
+
+}
+
+.card:hover {
+    transform: scale(0.95);
+}
+
+
+.cardcontainer {
+    display: flex;
+    justify-content: space-around;
+    gap: 8rem;
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    width: 100%;
+
+}
+
+.cardcontainer::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar for WebKit browsers it meanse -  the scrollbar will be hidden in webkit browsers like chrome and safari */
+}
